@@ -1,0 +1,6 @@
+rootProject.name = 'learn-java'
+include('annotation')
+include('test')
+include('fp&stream')
+include('design-pattern')
+
