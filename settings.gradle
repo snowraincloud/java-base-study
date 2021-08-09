@@ -1,6 +1,8 @@
-rootProject.name = 'learn-java'
+rootProject.name = 'java-base-study'
 include('annotation')
 include('test')
 include('fp&stream')
 include('design-pattern')
+include 'juc'
+include 'concurrent'
 
