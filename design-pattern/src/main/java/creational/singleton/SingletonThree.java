@@ -5,11 +5,11 @@ import net.jcip.annotations.ThreadSafe;
 
 /**
  * <h1>单例模式的实现3</h1>
- * <p>
+ * <pre>
  * 类加载时没有生成单例，只有当第一次获取实例时才去创建这个单例
  * 优点：使用时候创建，可能节约内存。
  * 缺点：每次都要锁住方法，即使instance已经被初始化，导致效率较低。
- * </p>
+ * </pre>
  * @author wangjunhao
  **/
 @ThreadSafe

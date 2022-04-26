@@ -5,12 +5,12 @@ import net.jcip.annotations.ThreadSafe;
 
 /**
  * <h1>单例模式的实现4</h1>
- * <p>
+ * <pre>
  * 静态内部类的懒加载
  * 在加载类SingletonFive的时候，不会初始化instance。
  * 调用getInstance()才会加载SingletonFiveHolder类，
  * 线程安全，没有内存浪费，不用锁。推荐使用。
- * </p>
+ * </pre>
  *
  * @author wangjunhao
  **/

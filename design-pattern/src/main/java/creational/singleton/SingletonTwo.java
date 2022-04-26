@@ -4,11 +4,11 @@ import net.jcip.annotations.NotThreadSafe;
 
 /**
  * <h1>单例模式的实现2</h1>
- * <p>
+ * <pre>
  * 类加载时没有生成单例，只有当第一次获取实例时才去创建这个单例
  * 优点：使用时候创建，可能节约内存。
  * 缺点：不是线程安全
- * </p>
+ * </pre>
  *
  * @author wangjunhao
  **/

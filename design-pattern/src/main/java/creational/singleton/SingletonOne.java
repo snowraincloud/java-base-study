@@ -4,12 +4,12 @@ import net.jcip.annotations.ThreadSafe;
 
 /**
  * <h1>单例模式的实现1</h1>
- * <p>
+ * <pre>
  *  类一旦加载就创建一个单例，保证在调用获取实例之前 单例已经存在了
  *
  *  优点：不存在线程安全问题，不存在同步sync性能问题。
  *  缺点：由于在声明的时候已经初始化，即使该类没有使用也会占用内存。
- * </p>
+ * </pre>
  * @author wangjunhao
  **/
 @ThreadSafe

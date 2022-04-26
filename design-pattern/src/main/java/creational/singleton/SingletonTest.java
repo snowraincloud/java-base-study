@@ -6,11 +6,11 @@ import java.util.Random;
 
 /**
  * <h1>单例模式</h1>
- * <p>
+ * <pre>
  * 一个类只有一个实例，且该类能自行创建这个实例的一种模式
  * 能够避免对象重复创建，节约空间并提升效率
  * 推荐使用 1、5、6 实现单例
- * </p>
+ * </pre>
  * <p>单例模式有三个特点:</p>
  * <ol>
  *     <li>单例类只有一个实例对象</li>
@@ -19,14 +19,15 @@ import java.util.Random;
  * </ol>
  * @author wangjunhao
  **/
-public class SingletonMain {
+public class SingletonTest {
 
 
     public static void main(String[] args) {
 
+        // 单例创建 并发测试
         for (int i = 0; i < 100; i++) {
-            // 创建线程 获取单例
-            new Thread(SingletonMain::get).start();
+            // 创建线程并启动 获取单例
+            new Thread(SingletonTest::get).start();
         }
 
     }
@@ -41,15 +42,23 @@ public class SingletonMain {
 
     private static final Random RAND = new Random(47);
 
+    /**
+     * <p>
+     * 使用反射获取单例
+     * </p>
+     * @return
+     */
     public static ISingleton get() {
         Method method = null;
         try {
+            // 获取返回单例的方法
             method = CLASSES[RAND.nextInt(CLASSES.length)].getMethod("getInstance");
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 
         try {
+            // 执行方法
             return (ISingleton) method.invoke(null);
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
